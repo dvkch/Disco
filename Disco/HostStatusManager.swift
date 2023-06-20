@@ -6,8 +6,12 @@
 //  Copyright © 2018 Syan. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Network
+
+#if os(iOS)
+import UIKit
+#endif
 
 extension Notification.Name {
     public static let hostStatusChanged = Notification.Name("HostStatusManager.hostStatusChanged")
@@ -20,6 +24,8 @@ public class HostStatusManager: NSObject {
     
     private override init() {
         super.init()
+
+        #if os(iOS)
         NotificationCenter.default.addObserver(
             self, selector: #selector(stop),
             name: UIApplication.didEnterBackgroundNotification, object: nil
@@ -28,6 +34,7 @@ public class HostStatusManager: NSObject {
             self, selector: #selector(start),
             name: UIApplication.willEnterForegroundNotification, object: nil
         )
+        #endif
     }
     
     // MARK: Types

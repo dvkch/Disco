@@ -1,0 +1,23 @@
+PODS:
+  - Disco (1.0.0):
+    - SwiftyPing (>= 1.2.2)
+  - SwiftyPing (1.2.2)
+
+DEPENDENCIES:
+  - Disco (from `.`)
+
+SPEC REPOS:
+  trunk:
+    - SwiftyPing
+
+EXTERNAL SOURCES:
+  Disco:
+    :path: "."
+
+SPEC CHECKSUMS:
+  Disco: e9bc1dd253e0e90c2d304a02369355ab4b619eb2
+  SwiftyPing: 284e9dc6ec6b7ed42c906758f8c1c067d8a7fc21
+
+PODFILE CHECKSUM: 68a360ee0fe7432c1eccc80909da1608a2dd49ef
+
+COCOAPODS: 1.12.1

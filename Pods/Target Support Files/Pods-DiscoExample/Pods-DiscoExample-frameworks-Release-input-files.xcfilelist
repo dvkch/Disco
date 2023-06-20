@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-DiscoExample/Pods-DiscoExample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Disco/Disco.framework
+${BUILT_PRODUCTS_DIR}/SwiftyPing/SwiftyPing.framework

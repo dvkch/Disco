@@ -6,7 +6,11 @@
 //  Copyright © 2018 Syan. All rights reserved.
 //
 
+import Foundation
+
+#if os(iOS)
 import UIKit
+#endif
 
 extension Notification.Name {
     public static let hostnameResolverUpdated = Notification.Name.init("HostnameResolver.updated")
@@ -20,10 +24,12 @@ public class HostnameResolver: NSObject {
     private override init() {
         super.init()
         
+        #if os(iOS)
         NotificationCenter.default.addObserver(
             self, selector: #selector(start),
             name: UIApplication.didBecomeActiveNotification, object: nil
         )
+        #endif
     }
     
     // MARK: Properties
