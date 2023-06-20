@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target  = '12.0'
   s.osx.deployment_target  = '10.14'
   s.name     = 'Disco'
-  s.version  = '1.0.0'
+  s.version  = '1.1.0'
   s.license  = { :type => 'Custom' }
   s.summary  = 'Network library for hosts discovery and monitoring'
   s.homepage = 'https://github.com/dvkch/Disco'
