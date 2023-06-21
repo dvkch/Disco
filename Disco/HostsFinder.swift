@@ -133,9 +133,9 @@ private class PingOperation: Operation {
             }
         }
         
+        dispatchGroup.enter()
         DispatchQueue.main.async {
             do {
-                dispatchGroup.enter()
                 try pinger.startPinging()
             }
             catch {
