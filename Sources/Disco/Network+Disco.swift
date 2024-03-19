@@ -7,6 +7,7 @@
 //
 
 import Network
+import Foundation
 
 extension IPv4Address {
     public var stringRepresentation: String {

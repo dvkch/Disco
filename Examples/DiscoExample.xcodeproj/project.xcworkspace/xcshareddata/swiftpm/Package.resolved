@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftyping",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/samiyr/SwiftyPing",
+      "state" : {
+        "revision" : "05591bc0047e41e0e1d98135c6bc457192a72d39",
+        "version" : "1.2.1"
+      }
+    }
+  ],
+  "version" : 2
+}
