@@ -9,6 +9,32 @@
 import Network
 import Foundation
 
+extension NWConnection {
+    public static func askLocalNetworkAccess(_ completion: @escaping (Bool) -> ()) {
+        // This method will try its best to trigger a Local Network Privacy prompt to show.
+        // While making a simple TCP connection used to work well on both macOS and iOS, since
+        // macOS Sequoia it doesn't seem to work properly anymore... So instead we send a UDP
+        // unicast request to a dumb address and hope for the best
+        
+        let connection = NWConnection(host: "127.0.0.2", port: 12345, using: .udp)
+        connection.stateUpdateHandler = { state in
+            switch state {
+            case .ready:
+                let data = "Just asking for local network permissions".data(using: .utf8)!
+                connection.send(content: data, completion: .contentProcessed { _ in completion(true) })
+                
+            case .failed(let error):
+                completion(false)
+
+            default:
+                break
+            }
+        }
+        
+        connection.start(queue: .global(qos: .userInteractive))
+    }
+}
+
 extension IPv4Address {
     public var stringRepresentation: String {
         return debugDescription

@@ -7,6 +7,7 @@
 
 import UIKit
 import Disco
+import Network
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.layer.masksToBounds = true
         
         HostnameResolver.shared.start()
+        NWConnection.askLocalNetworkAccess { granted in
+            print("Local network access granted:", granted)
+        }
 
         return true
     }
