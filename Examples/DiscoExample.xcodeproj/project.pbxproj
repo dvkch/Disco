@@ -27,6 +27,7 @@
 		973021992A40824F00CF8C07 /* InterfacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfacesVC.swift; sourceTree = "<group>"; };
 		977E73482A40865E008CFCFE /* DetailedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCell.swift; sourceTree = "<group>"; };
 		977E734E2A40880A008CFCFE /* HostsFinderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostsFinderVC.swift; sourceTree = "<group>"; };
+		978E6B0B2CF72811001A8CDB /* DiscoExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiscoExample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		972EBEFA2A4081410025310C /* DiscoExample */ = {
 			isa = PBXGroup;
 			children = (
+				978E6B0B2CF72811001A8CDB /* DiscoExample.entitlements */,
 				9730219D2A40825300CF8C07 /* UI */,
 				972EBEFB2A4081410025310C /* AppDelegate.swift */,
 				972EBEFF2A4081410025310C /* ViewController.swift */,
@@ -297,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DiscoExample/DiscoExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79RY8264V4;
@@ -314,6 +317,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.syan.DiscoExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DiscoExample/DiscoExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79RY8264V4;
@@ -342,6 +348,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.syan.DiscoExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
